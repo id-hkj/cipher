@@ -48,9 +48,7 @@ namespace Cipher
             {
                 case "-h":
                 case "--help":
-                    Console.WriteLine("The following commands are available. For more information on what each one does, "
-                                    + "run the help command with that keyword in front (e.g. cipher data -h)");
-                    Console.WriteLine();
+                    Console.WriteLine("TUsage: cipher [options...]");
                     Console.WriteLine("data - Some Corpus and Fittness functions");
                     Console.WriteLine("mono - Monalphabetic substitution cipher solver/encoders");
                     Console.WriteLine("poly - Polyalphabetic substitution cipher solver/encoders");
@@ -62,6 +60,9 @@ namespace Cipher
                     Console.WriteLine("proto - Protomechanical ciphers solver/encoder");
                     Console.WriteLine("other - Miscelanious ciphers");
                     Console.WriteLine();
+                    Console.WriteLine("This is not the full help, this menu is stripped into categories.");
+                    Console.WriteLine("Use " + '"' + "--help category + '"' + " to get an overview of all categories.");
+                    Console.WriteLine("For all options use the manual or " + '"' " "--help all" + '"' + ". (not yet implemented)");
                     Console.WriteLine();
                     Console.WriteLine("As of writing, only data has been implemented.");
                     break;
