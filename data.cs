@@ -1,12 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Security.Cryptography.X509Certificates;
-
 namespace Cipher
 {
     public class Data
     {
-        public static void corpus_clean(string read_file, string out_file)
+        public static void Corpus_Clean(string read_file, string out_file)
         {
             read_file = Path.GetFullPath(read_file);
             out_file = Path.GetFullPath(out_file);
@@ -16,7 +12,7 @@ namespace Cipher
                 return;
             }
 
-            var sr = new StreamReader(read_file);
+            StreamReader sr = new(read_file);
             string total = sr.ReadToEnd();
             string final = "";
             
@@ -44,7 +40,7 @@ namespace Cipher
             Console.WriteLine("Clean finished.");
             Console.WriteLine("Writing result to file");
 
-            using (StreamWriter sw = new StreamWriter(out_file))
+            using (StreamWriter sw = new(out_file))
             {
                 sw.WriteLine(final);
             }
